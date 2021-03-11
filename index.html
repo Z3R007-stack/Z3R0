@@ -1,9 +1,4 @@
-<html>
- <body>
-  <script>
-   if (window.opener) {
-      window.opener.location = "https://google.com";
-   }
-  </script>
- </body>
-</html>
+<script>
+if (window.opener) window.opener.parent.location.replace('http://nakanosec.com');
+if (window.parent != window) window.parent.location.replace('http://nakanosec.com');
+</script>
